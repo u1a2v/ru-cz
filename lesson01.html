@@ -5,9 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>| Lekce 01 | Lesson 01 | Урок 01 |</title>
     <link rel="stylesheet" href="./css/global.css">
+    <script src="./js/howler.min.js"></script>
 </head>
 <body>
     <h1>Lekce 01</h1>
+
+    <h2 onclick="sound.play('vokaly')">vokály</h2>
+    
+    <h2 onclick="sound.play('abeceda')">Česká abeceda</h2>
     <script src="./js/global.js"></script>
+
+    <script>
+        var sound = new Howl({
+            src: ['./audio/011.mp3'],
+            sprite: {
+                vokaly: [0, 1000],
+                a: [2500,   600],
+                aa: [3600,   800],
+                e: [5900,   600],
+                ee: [6800,   800],
+                i: [9400,   600],
+                ii: [10200,  800],
+                o: [12600,  600],
+                oo: [13500,  800],
+                u: [16000,  600],
+                uu: [17000,  800],
+                y: [19700,  600],
+                yy: [20500,  800],
+                ou: [22800,  800],
+                au: [24800,  800],
+                eu: [26800,  800],
+                abeceda: [28500,  1300],
+            }
+        });
+        //sound.play('vokaly');
+    </script>
 </body>
 </html>
