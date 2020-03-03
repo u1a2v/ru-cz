@@ -10,9 +10,31 @@
 <body>
     <h1>Lekce 01</h1>
 
-    <h2 onclick="sound.play('vokaly')">vokály</h2>
+    <h2>
+        <div class="sounding" id="vokaly">vokály</div>
+    </h2>
     
-    <h2 onclick="sound.play('abeceda')">Česká abeceda</h2>
+    <h2>
+        <div class="sounding" id="abeceda">Česká abeceda</div>
+    </h2>
+
+    <h2>České hlásky</h2>
+    <div>
+        <div class="sounding" id="a">a</div>
+        <div class="sounding" id="e">e</div>
+        <div class="sounding" id="i">i</div>
+        <div class="sounding" id="o">o</div>
+        <div class="sounding" id="u">u</div>
+        <div class="sounding" id="y">y</div>
+        <br>
+        <div class="sounding" id="aa">á</div>
+        <div class="sounding" id="ee">é</div>
+        <div class="sounding" id="ii">í</div>
+        <div class="sounding" id="oo">ó</div>
+        <div class="sounding" id="uu">ú (ů)</div>
+        <div class="sounding" id="yy">ý</div>
+    </div>
+
     <script src="./js/global.js"></script>
 
     <script>
@@ -38,7 +60,12 @@
                 abeceda: [28500,  1300],
             }
         });
-        //sound.play('vokaly');
+        
+        let sounds = document.getElementsByClassName('sounding');
+        for (let i=0; i<sounds.length; i++) {
+            sounds[i].addEventListener('click', () => sound.play(sounds[i].id));
+        }
+
     </script>
 </body>
 </html>
