@@ -35,6 +35,13 @@
         <div class="sounding" id="yy">ý</div>
     </div>
 
+    <h2>Diphtongs (dvouhlásky)</h2>
+    <div>
+        <div class="sounding" id="ou">ou</div>
+        <div class="sounding" id="au">au</div>
+        <div class="sounding" id="eu">eu</div>
+    </div>
+
     <script src="./js/global.js"></script>
 
     <script>
@@ -63,7 +70,7 @@
         
         let sounds = document.getElementsByClassName('sounding');
         for (let i=0; i<sounds.length; i++) {
-            sounds[i].addEventListener('click', () => sound.play(sounds[i].id));
+            sounds[i].addEventListener('click', () => console.log(sound.play(sounds[i].id)));
         }
 
     </script>
